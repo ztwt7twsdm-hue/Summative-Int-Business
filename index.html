@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Macedonia Country Profile</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --panel:#111827;
+      --card:#1f2937;
+      --accent:#facc15;
+      --accent2:#38bdf8;
+      --text:#e5e7eb;
+      --muted:#cbd5e1;
+      --border:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b1120 0%, #111827 45%, #0f172a 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent2); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter: blur(10px);
+      background: rgba(15,23,42,.85);
+      border-bottom:1px solid var(--border);
+    }
+    nav{
+      max-width:1200px;
+      margin:auto;
+      padding:14px 20px;
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+    }
+    nav a{
+      color:var(--text);
+      padding:8px 12px;
+      border-radius:999px;
+      transition:.2s;
+      font-size:.95rem;
+    }
+    nav a:hover{background:rgba(255,255,255,.08)}
+    header{
+      max-width:1200px;
+      margin:0 auto;
+      padding:64px 20px 28px;
+      display:grid;
+      grid-template-columns:1.4fr 1fr;
+      gap:24px;
+      align-items:center;
+    }
+    .hero{
+      padding:30px;
+      background:linear-gradient(145deg, rgba(250,204,21,.14), rgba(56,189,248,.12));
+      border:1px solid var(--border);
+      border-radius:24px;
+      box-shadow:0 20px 50px rgba(0,0,0,.25);
+    }
+    .hero h1{margin:0 0 10px; font-size:clamp(2rem,4vw,4rem)}
+    .hero p{margin:0; color:var(--muted); font-size:1.05rem}
+    .flag-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:22px;
+      text-align:center;
+    }
+    .flag{
+      width:100%;
+      max-width:360px;
+      border-radius:18px;
+      display:block;
+      margin:0 auto 14px;
+      border:1px solid var(--border);
+    }
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 20px 70px;
+    }
+    section{
+      margin-top:26px;
+      background:rgba(31,41,55,.88);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+    }
+    section h2{
+      margin-top:0;
+      color:var(--accent);
+      font-size:1.7rem;
+      border-bottom:1px solid var(--border);
+      padding-bottom:10px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+      margin-top:16px;
+    }
+    .card{
+      background:rgba(17,24,39,.72);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+    }
+    .card h3{margin-top:0; color:var(--accent2)}
+    ul,ol{margin:10px 0 0 22px}
+    .note{
+      color:var(--muted);
+      font-size:.95rem;
+      margin-top:8px;
+    }
+    .small{font-size:.92rem; color:var(--muted)}
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+    .footer{
+      text-align:center;
+      padding:28px 16px 42px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .tag{
+      display:inline-block;
+      padding:5px 10px;
+      background:rgba(250,204,21,.15);
+      border:1px solid rgba(250,204,21,.35);
+      color:#fde68a;
+      border-radius:999px;
+      margin:6px 8px 0 0;
+      font-size:.9rem;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:14px;
+      margin-top:12px;
+    }
+    th,td{
+      border:1px solid var(--border);
+      padding:10px;
+      text-align:left;
+      vertical-align:top;
+    }
+    th{
+      background:rgba(250,204,21,.12);
+      color:#fff;
+    }
+    .ad-box{
+      border:1px dashed rgba(250,204,21,.45);
+      border-radius:18px;
+      padding:16px;
+      background:rgba(250,204,21,.06);
+    }
+    @media (max-width: 860px){
+      header,.two-col{grid-template-columns:1fr}
+      nav{justify-content:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#generic">Generic Country Information</a>
+      <a href="#economy">Economy & Trade</a>
+      <a href="#culture">Culture</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#agreements">Trade Agreements</a>
+      <a href="#sources">APA Sources</a>
+    </nav>
+  </div>
+
+  <header>
+    <div class="hero">
+      <h1>North Macedonia</h1>
+      <p>Country Profile for Exporters and Importers from a Canadian Perspective</p>
+      <div style="margin-top:16px;">
+        <span class="tag">Southeast Europe</span>
+        <span class="tag">Balkan Peninsula</span>
+        <span class="tag">Capital: Skopje</span>
+      </div>
+    </div>
+
+    <div class="flag-card">
+      <img class="flag" src="north-macedonia-flag.jpg" alt="Flag of North Macedonia">
+      <div class="small">Replace with your flag image and map image in Google Sites or your folder.</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="snapshot">
+      <h2>Snapshot</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Basic Facts</h3>
+          <ul>
+            <li>Population: 1,836,713.</li>
+            <li>Life expectancy: 74.4 years.</li>
+            <li>GDP per capita: about US$9,217.8.</li>
+            <li>Currency: Macedonian denar (MKD).</li>
+            <li>Time zone: CET/CEST.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Geography</h3>
+          <ul>
+            <li>Region: Southeast Europe.</li>
+            <li>Location: Balkan Peninsula.</li>
+            <li>Borders: Serbia, Kosovo, Bulgaria, Greece, and Albania.</li>
+            <li>Climate: moderate continental with Mediterranean influence.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Government</h3>
+          <ul>
+            <li>Parliamentary democracy.</li>
+            <li>Legislative branch: Assembly.</li>
+            <li>Executive branch: Government.</li>
+            <li>Judicial branch: courts.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Trade Snapshot</h3>
+          <ul>
+            <li>Exports: about US$8.99 billion.</li>
+            <li>Imports: about US$12.05 billion.</li>
+            <li>Trade balance: deficit of about US$3.06 billion.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="generic">
+      <h2>Generic Country Information</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Country Details</h3>
+          <table>
+            <tr><th>Item</th><th>Information</th></tr>
+            <tr><td>Country</td><td>North Macedonia</td></tr>
+            <tr><td>Capital</td><td>Skopje</td></tr>
+            <tr><td>Currency</td><td>Macedonian denar (MKD)</td></tr>
+            <tr><td>Official Language</td><td>Macedonian</td></tr>
+            <tr><td>National Anthem</td><td>Denes nad Makedonija</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Map and Flag</h3>
+          <p class="small">Insert your map image here:</p>
+          <img src="north-macedonia-map.jpg" alt="Map of North Macedonia" style="width:100%;border-radius:14px;border:1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <section id="economy">
+      <h2>Economy and Trade</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Advantages for Exporters</h3>
+          <ul>
+            <li>Access to regional trade agreements.</li>
+            <li>Strategic Balkan location.</li>
+            <li>Growing industrial and logistics potential.</li>
+            <li>Opportunities in electrical goods and automotive supply chains.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Challenges</h3>
+          <ul>
+            <li>Trade deficit.</li>
+            <li>Language and labeling rules.</li>
+            <li>Need for compliance with local product standards.</li>
+            <li>Market size is relatively small.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Popular Product</h3>
+          <p>One important export category is reaction and catalytic products, along with insulated wire and electricity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="culture">
+      <h2>Culture</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Do’s</h3>
+          <ol>
+            <li>Be punctual and polite.</li>
+            <li>Use formal greetings in business settings.</li>
+            <li>Respect Macedonian language requirements.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Don’ts</h3>
+          <ol>
+            <li>Do not ignore bilingual labeling laws.</li>
+            <li>Do not rush relationship-building.</li>
+            <li>Do not use informal language too quickly in business.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3>Cultural Determinants</h3>
+        <p><strong>History:</strong> Greek, Roman, Ottoman, and Yugoslav influences.</p>
+        <p><strong>Geography:</strong> Mountainous Balkan landscape and regional crossroads.</p>
+        <p><strong>Religion:</strong> Mainly Christianity, with a significant Muslim population.</p>
+      </div>
+    </section>
+
+    <section id="marketing">
+      <h2>Marketing</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Regulations</h3>
+          <p>Packaging and consumer information should be in Macedonian and Cyrillic, and bilingual requirements may apply depending on the product and audience.</p>
+        </div>
+        <div class="card">
+          <h3>Media Outlets</h3>
+          <ul>
+            <li>MRT</li>
+            <li>Sitel</li>
+            <li>Kanal 5</li>
+            <li>Alfa TV</li>
+            <li>PlusInfo.mk</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Local Advertisement Example</h3>
+          <div class="ad-box">
+            <p><strong>Example:</strong> “Fresh local food, delivered to your home in Skopje.”</p>
+            <p class="small">Replace this with a real advertisement screenshot or link in your final project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agreements">
+      <h2>Trade Agreements</h2>
+      <div class="card">
+        <ul>
+          <li>Stabilization and Association Agreement with the EU.</li>
+          <li>CEFTA.</li>
+          <li>FTA with Turkey.</li>
+          <li>FTA with Ukraine.</li>
+          <li>Membership in WTO and UNESCO.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>APA Sources</h2>
+      <div class="card">
+        <p class="small">
+          Add your final APA references here. Use the official websites and verified sources you used for the project.
+        </p>
+        <ul>
+          <li>World Bank. (2026). North Macedonia overview.</li>
+          <li>Government of North Macedonia. (2026). Trade and country information.</li>
+          <li>WTO. (2026). Trade statistics and agreements.</li>
+          <li>UNESCO. (2026). North Macedonia profile.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer">
+    North Macedonia Country Profile Website
+  </div>
+</body>
+</html>
